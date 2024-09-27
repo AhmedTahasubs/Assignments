@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <main class="py-5 ">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <h1 class="position-relative">Bookmarker</h1>
+      <div class="main-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+        <h2>
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="w-100">
+          <label for="exampleFormControlInput1" class="form-label fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name
+          </label>
+          <input oninput="isValidInput(URLNameRegex,this)" type="email" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+        </div>
+        <div class="w-100">
+          <label for="exampleFormControlInput1" class="form-label fw-semibold">
+          <i class="fa-solid fa-link pe-2"></i>Site URL
+          </label>
+          <input oninput="isValidInput(URLRegex,this)" type="email" class="form-control" id="bookmarkURL" placeholder="Website URL">
+        </div>
+        <button onclick="addBookmark()" class="btn btn-danger px-5" id="submitButton">Submit</button>
+      </div>
+      <table class="table mt-4 text-center bg-light">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent">
+        </tbody>
+      </table>
+    </div>   
+       
+  </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
